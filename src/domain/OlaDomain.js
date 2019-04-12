@@ -10,4 +10,9 @@ module.exports = {
         console.log(request.params.id);
         return response.status(200).send(request.params.id);
     },
+    async exibirQueryParams(request, response) {
+        const {teste} = request.query;
+        console.log(teste);
+        return response.status(200).send(teste)
+    }
 };
