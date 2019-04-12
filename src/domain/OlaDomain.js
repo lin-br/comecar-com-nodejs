@@ -11,7 +11,7 @@ module.exports = {
         return response.status(200).send(request.params.id);
     },
     async exibirQueryParams(request, response) {
-        const {teste} = request.query;
+        const {teste = "123"} = request.query;
         console.log(teste);
         return response.status(200).send(teste)
     }
